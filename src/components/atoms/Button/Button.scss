@@ -1,4 +1,4 @@
-@import './_imports/_variables';
+@import '../../../assets/styles/_imports/variables';
 
 [class^="btn"] {
 	transition: all 0.3s $cubic;
@@ -55,12 +55,12 @@
 .btn--raised {
 	border-radius: $border-radius-small*0.66;
 	box-shadow: $box-shadow-raised;
-	@include btn-gradient($river);
+	@include btn-gradient($secondary);
 	will-change: box-shadow, background-color;
 	color: white;
 	&:hover {
 		box-shadow: $box-shadow-raised-hover;
-		background-color: lighten($river, 5%);
+		background-color: lighten($secondary, 5%);
 	}
 }
 

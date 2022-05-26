@@ -1,13 +1,6 @@
 @import './_imports/_variables',
-        './_imports/_colors';
-
-ul, ol {
-	margin-left: $space-med;
-	margin-bottom: $space-med;
-	li {
-		margin-top: $space-small*1;
-	}
-}
+        './_imports/_colors',
+		'./_imports/reset';
 
 ol {
 	list-style-type: decimal;

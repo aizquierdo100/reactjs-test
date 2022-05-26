@@ -1,4 +1,13 @@
+@import "./_imports/variables";
+
 img, audio, video {
 	width: 100%;
 	vertical-align: middle;
+}
+
+.img-card {
+	height: 300px;
+	object-fit: contain;
+	object-position: bottom;
+	margin-bottom: $space-small;
 }

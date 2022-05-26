@@ -1,8 +1,9 @@
+@import './fonts';
 @import './colors';
 
 // Type
 $serif: 'Gentium Book Basic', serif !default;
-$sans: Roboto, sans-serif !default;
+$roboto: 'Roboto', sans-serif !default;
 $font-small: 12px !default;
 $font-med: 16px !default;
 $font-big: 22px !default;
@@ -10,8 +11,8 @@ $font-huge: 40px !default;
 $line-height: 130% !default;
 
 // Colors
-$primary: $turqoise !default;
-$secondary: lighten($turqoise, 10%) !default;
+$primary: $belize !default;
+$secondary: $pink !default;
 $accent: $yellow !default;
 
 $body-background: $off-white !default;

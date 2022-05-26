@@ -3,8 +3,8 @@
 @for $i from 1 through $grid-columns {
 	.g--#{$i} {
 		width: 100%/$grid-columns*$i;
-		margin-top: $space-big;
-		margin-bottom: $space-big;
+		margin-top: $space-small;
+		margin-bottom: $space-small;
 	}
 	.m--#{$i} {
 		margin-left: 100%/$grid-columns*$i;
@@ -17,6 +17,14 @@
 
 [class*="container"] {
 	display: flex;
+}
+
+.container--between {
+	justify-content: space-between;
+}
+
+.container--around {
+	justify-content: space-around;
 }
 
 .container--baseline {

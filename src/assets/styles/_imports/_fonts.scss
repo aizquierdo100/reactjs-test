@@ -1,0 +1,9 @@
+$roboto-font-path: "../../fonts/Roboto";
+
+@font-face {
+  // This is parsed as a normal function call that takes a quoted string.
+  src: url("#{$roboto-font-path}/roboto-v30-latin-regular.ttf") format("truetype"),
+       url("#{$roboto-font-path}/roboto-v30-latin-regular.woff") format("woff"),
+       url("#{$roboto-font-path}/roboto-v30-latin-regular.woff2") format("woff2");
+  font-family: "Roboto";
+}
