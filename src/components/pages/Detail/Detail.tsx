@@ -18,7 +18,7 @@ const Detail: FC = () => {
         useAppSelector((state) => state.productsState);
     const [count, setCount] = useState(0);
     const dispatch = useAppDispatch();
-    const {selectedCount, addCartItem, removeCartItem} = useCart();
+    const {addCartItem} = useCart();
 
     const addOrIncreaseHandler = () => {
         setCount((prevState) => prevState + 1);
@@ -30,10 +30,6 @@ const Detail: FC = () => {
 
     const removeOrDecreaseHandler = () => {
         setCount((prevState) => prevState - 1);
-/*        if(selected){
-            const cartItem: ICartItem = {...selected, quantity: 1};
-            removeCartItem(cartItem);
-        }*/
     }
 
     const addToCartHandler = () => {
@@ -65,7 +61,7 @@ const Detail: FC = () => {
            <div className="container container--evenly container--wrap--m">
                <div className="g--7">
                    <div className='container container--between container--wrap--m'>
-
+                       
                    </div>
                </div>
                <div className="g--5">

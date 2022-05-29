@@ -5,15 +5,15 @@ import ProductCard from "../../molecules/ProductCard/ProductCard";
 import '../../../assets/styles/grid.scss';
 import '../../../assets/styles/animations.scss';
 import {EffectStatus, IProduct} from "../../../models";
-import {shuffle} from "../../../utils";
 
 interface IProps {
-    products: IProduct[],
-    isLoading: EffectStatus
-    addCartHandler: (id: number) => void;
+    products: IProduct[];
+    isLoading: EffectStatus;
+    addCartHandler: (product: IProduct) => void;
 }
 
-const ProductGrid: FC<IProps> = ({products, isLoading, addCartHandler}) => {
+const ProductGrid: FC<IProps> = ({products,
+                                     isLoading, addCartHandler}) => {
 
     const navigate = useNavigate();
 
@@ -21,7 +21,7 @@ const ProductGrid: FC<IProps> = ({products, isLoading, addCartHandler}) => {
         navigate(`/details/${id}`);
     }
 
-    const productsContent = isLoading ? products ? shuffle(products).slice(2).map((x) => {
+    const productsContent = isLoading ? products ? products.map((x) => {
         const product = x as IProduct;
         return (
             <React.Fragment key={product.id}>
@@ -29,7 +29,7 @@ const ProductGrid: FC<IProps> = ({products, isLoading, addCartHandler}) => {
                     <ProductCard
                         alt={product.name}
                         moreInfoHandler={() => moreInfoHandler(product.id)}
-                        addCartHandler={() => addCartHandler(product.id)}
+                        addCartHandler={() => addCartHandler(product)}
                         image={require(`../../../assets/images/products/${product.image}`)}
                         price={product.price}
                         title={product.name}/>
