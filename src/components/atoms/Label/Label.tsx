@@ -1,10 +1,10 @@
-import React, {FC} from "react";
+import React, {FC, ReactElement} from "react";
 
 import '../../../assets/styles/type.scss';
 
 interface IProps {
     className?: string;
-    children: string;
+    children: string | number;
 }
 
 const Label: FC<IProps> = ({className, children}) => {
