@@ -6,7 +6,11 @@ import '../../../assets/styles/grid.scss';
 import '../../../assets/styles/media.scss';
 import logo from '../../../assets/images/logo/logo.png';
 
-const AppBar: FC = () => {
+interface IProps {
+    cartCount: number;
+}
+
+const AppBar: FC<IProps> = ({cartCount}) => {
     return (
         <header className="container container--between">
             <input type="checkbox" id="nav--horizontal-responsive"/>
@@ -15,7 +19,7 @@ const AppBar: FC = () => {
                 <img src={logo} alt="logo" height={50}/>
             </div>
             <nav className="g--3 g-s--12 nav--horizontal">
-                <Navigation />
+                <Navigation cartCount={cartCount}/>
             </nav>
         </header>
     )

@@ -17,11 +17,11 @@ const cartSlice = createSlice({
             const index = state.items.findIndex(x => x.sku === action.payload.sku);
             if(index !== -1){
                 state.items[index].quantity += action.payload.quantity;
-                state.totalProducts++;
+                state.totalProducts += action.payload.quantity;
             }
             else{
                 state.items.push(action.payload);
-                state.totalProducts++;
+                state.totalProducts += action.payload.quantity;
             }
         },
         removeItem: (state, action: PayloadAction<ICartItem>) => {
@@ -29,7 +29,7 @@ const cartSlice = createSlice({
             if(foundIndex !== -1){
                 if(state.items[foundIndex].quantity > 0){
                     state.items[foundIndex].quantity -= action.payload.quantity;
-                    state.totalProducts--;
+                    state.totalProducts -= action.payload.quantity;
                 }
                 else{
                     state.items.splice(foundIndex, 1);
