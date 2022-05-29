@@ -8,25 +8,30 @@ interface IProps {
     disabled?: boolean | null;
     children: ReactNode;
     onClick?: () => void | null;
-    type?: ButtonType
+    type?: ButtonType,
+    className?: string | null;
 }
 
 const Button: FC<IProps> = ({disabled = false, onClick,
-                                type = ButtonType.PRIMARY,
+                                type = ButtonType.PRIMARY, className,
                                 children}) => {
-    let className = 'btn--raised';
+    let classes = 'btn--raised';
     if(type === ButtonType.CART_ITEM){
-        className = 'btn--float';
+        classes = 'btn--float';
     }
-    if(type === ButtonType.NAVIGATION){
-        className = 'btn--flat';
+    if(type === ButtonType.TEXT){
+        classes = 'btn--flat';
     }
     return (
         <button
-            className={className}
+            className={`${classes} ${className}`}
             onClick={onClick}
             disabled={!!disabled}>{children}</button>
     )
+}
+
+Button.defaultProps = {
+    className: ''
 }
 
 export default Button;

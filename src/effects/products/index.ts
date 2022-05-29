@@ -10,7 +10,7 @@ const initialData: IProduct[] = [
         name: 'Woman Blue Dress',
         description: 'Adfh fghjj gjgjghj ghjggjggh fh jh gjh jgjg',
         image: 'model1.jpg',
-        price: 120
+        price: 120000
     },
     {
         id: 2,
@@ -18,7 +18,7 @@ const initialData: IProduct[] = [
         name: 'Blue mono',
         description: 'Adfh fghjj gjgjghj ghjggjggh fh jh gjh jgjg',
         image: 'model2.jpg',
-        price: 80
+        price: 80000
     },
     {
         id: 3,
@@ -26,7 +26,7 @@ const initialData: IProduct[] = [
         name: 'Blue shorts',
         description: 'Adfh fghjj gjgjghj ghjggjggh fh jh gjh jgjg',
         image: 'model4.jpg',
-        price: 95
+        price: 95000
     },
     {
         id: 4,
@@ -34,7 +34,7 @@ const initialData: IProduct[] = [
         name: 'Stripe dress',
         description: 'Adfh fghjj gjgjghj ghjggjggh fh jh gjh jgjg',
         image: 'model5.jpg',
-        price: 300
+        price: 300000
     },
     {
         id: 5,
@@ -42,7 +42,7 @@ const initialData: IProduct[] = [
         name: 'Red sweter',
         description: 'Adfh fghjj gjgjghj ghjggjggh fh jh gjh jgjg',
         image: 'model6.jpg',
-        price: 400
+        price: 400000
     }
 ]
 

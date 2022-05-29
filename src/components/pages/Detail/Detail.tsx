@@ -1,4 +1,4 @@
-import React, {FC, useEffect} from 'react';
+import React, {FC, useEffect, useState} from 'react';
 import {useParams} from "react-router-dom";
 
 import CartIndicator from "../../molecules/CartIndicator/CartIndicator";
@@ -9,33 +9,46 @@ import {useAppSelector} from "../../../hooks/useAppSelector";
 import {getProdDetailEffect} from '../../../effects/products'
 import {useAppDispatch} from "../../../hooks/useAppDispatch";
 import {setSelectedRequest, setSelectedSuccess, setSelectedError} from '../../../store/slices'
+import SmallCartBox from "../../organisms/SmallCartBox/SmallCartBox";
 
 const Detail: FC = () => {
 
     const {id} = useParams();
     const {selected, selectedStatus, selectedError} =
         useAppSelector((state) => state.productsState);
+    const [count, setCount] = useState(0);
     const dispatch = useAppDispatch();
     const {selectedCount, addCartItem, removeCartItem} = useCart();
 
     const addOrIncreaseHandler = () => {
-        if(selected){
+        setCount((prevState) => prevState + 1);
+/*        if(selected){
             const cartItem: ICartItem = {...selected, quantity: 1};
+            addCartItem(cartItem);
+        }*/
+    }
+
+    const removeOrDecreaseHandler = () => {
+        setCount((prevState) => prevState - 1);
+/*        if(selected){
+            const cartItem: ICartItem = {...selected, quantity: 1};
+            removeCartItem(cartItem);
+        }*/
+    }
+
+    const addToCartHandler = () => {
+        if(selected){
+            const cartItem: ICartItem = {...selected, quantity: count};
             addCartItem(cartItem);
         }
     }
 
-    const removeOrDecreaseHandler = () => {
-        if(selected){
-            const cartItem: ICartItem = {...selected, quantity: 1};
-            removeCartItem(cartItem);
-        }
-    }
-
-    let cartIndContent = null;
-    if(id){
-        cartIndContent = <CartIndicator
-            quantity={selectedCount(parseInt(id))}
+    let smallCartContent = null;
+    if(id && selected?.price){
+        smallCartContent = <SmallCartBox
+            price={selected.price}
+            quantity={count}
+            addToCartHandler={addToCartHandler}
             increaseHandler={addOrIncreaseHandler}
             decreaseHandler={removeOrDecreaseHandler}/>;
     }
@@ -50,13 +63,13 @@ const Detail: FC = () => {
     return (
        <section>
            <div className="container container--evenly container--wrap--m">
-               <div className="g--8">
+               <div className="g--7">
                    <div className='container container--between container--wrap--m'>
 
                    </div>
                </div>
-               <div className="g--4">
-                   {cartIndContent}
+               <div className="g--5">
+                   {smallCartContent}
                </div>
            </div>
        </section>

@@ -4,7 +4,7 @@ import Button from "../../atoms/Button/Button";
 import Card from "../../atoms/Card/Card";
 import Label from "../../atoms/Label/Label";
 import Image from '../../atoms/Image/Image';
-import {numberWithCommas} from "../../../utils";
+import {renderPrice} from "../../../utils";
 
 interface IProps {
     image: string;
@@ -23,7 +23,7 @@ const ProductCard: FC<IProps> = ({image, alt, title, price,
                 <Image src={image} alt={alt} />
                 <div className='card-content'>
                     <Label className='card-title'>{title}</Label>
-                    <Label className='card-subtitle'>{numberWithCommas(price) + ' VND'}</Label>
+                    <Label className='card-subtitle'>{renderPrice(price)}</Label>
                     <div className='container container--between g--12'>
                         <Button onClick={moreInfoHandler}>More info</Button>
                         <Button onClick={addCartHandler}>Add to cart</Button>

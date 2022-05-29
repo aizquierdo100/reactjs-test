@@ -1,5 +1,5 @@
 export enum ButtonType {
-    NAVIGATION = 'NAVIGATION',
+    TEXT = 'TEXT',
     CART_ITEM = 'CART_ITEM',
     PRIMARY = 'PRIMARY'
 }
