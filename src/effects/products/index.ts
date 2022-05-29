@@ -56,7 +56,7 @@ export const getHomeProdEffect = (dispatch: AppDispatch)  =>
             //dispatch success or error in case some invalid data response
             dispatch(actionSuccess(initialData));
             //dispatch(actionError());
-        }, 2000);
+        }, 1000);
 }
 
 export const getProdDetailEffect = (dispatch: AppDispatch) =>
@@ -71,5 +71,5 @@ export const getProdDetailEffect = (dispatch: AppDispatch) =>
             if(found)
                 dispatch(actionSuccess(found));
             //dispatch(actionError());
-        }, 2000);
+        }, 1000);
 }

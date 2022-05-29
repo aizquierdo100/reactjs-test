@@ -15,7 +15,7 @@ const ProductDesc: FC<IProps> = ({image, name, description}) => {
     return (
         <div className='container container--center container--wrap--m'>
             <div className='g--8'>
-                <Image src={image} alt={name}/>
+                <Image src={image} alt={name} zoom/>
             </div>
             <div className='g--8'>
                 <Label>{name}</Label>

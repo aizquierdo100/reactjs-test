@@ -16,3 +16,9 @@ export const numberWithCommas = (x: number) => {
 export const renderPrice = (price: number, quantity = 1) => {
     return `${numberWithCommas(price * quantity)} VND`;
 }
+
+export const convertToSlug = (text: string) => {
+    return text.toLowerCase()
+        .replace(/ /g, '-')
+        .replace(/[^\w-]+/g, '');
+}

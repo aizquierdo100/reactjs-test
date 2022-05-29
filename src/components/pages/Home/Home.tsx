@@ -42,7 +42,7 @@ const Home:FC = () => {
        <section>
            <ProductGrid
                products={randomProducts}
-               isLoading={productsStatus}
+               status={productsStatus}
                addCartHandler={addCartHandler}/>
        </section>
     )

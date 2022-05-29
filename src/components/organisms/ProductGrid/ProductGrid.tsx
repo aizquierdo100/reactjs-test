@@ -8,12 +8,11 @@ import {EffectStatus, IProduct} from "../../../models";
 
 interface IProps {
     products: IProduct[];
-    isLoading: EffectStatus;
+    status: EffectStatus;
     addCartHandler: (product: IProduct) => void;
 }
 
-const ProductGrid: FC<IProps> = ({products,
-                                     isLoading, addCartHandler}) => {
+const ProductGrid: FC<IProps> = ({products, status, addCartHandler}) => {
 
     const navigate = useNavigate();
 
@@ -21,22 +20,28 @@ const ProductGrid: FC<IProps> = ({products,
         navigate(`/details/${id}`);
     }
 
-    const productsContent = isLoading ? products ? products.map((x) => {
-        const product = x as IProduct;
-        return (
-            <React.Fragment key={product.id}>
-                <div className='g--3 g-m--4 g-s--12 fade-in-from-top'>
-                    <ProductCard
-                        alt={product.name}
-                        moreInfoHandler={() => moreInfoHandler(product.id)}
-                        addCartHandler={() => addCartHandler(product)}
-                        image={require(`../../../assets/images/products/${product.image}`)}
-                        price={product.price}
-                        title={product.name}/>
-                </div>
-            </React.Fragment>
-        )
-    }) : null : 'Loading';
+    let productsContent = null;
+    if(status === EffectStatus.LOADING){
+        productsContent = 'Loading';
+    }
+    else if(status === EffectStatus.SUCCESS){
+        productsContent = products.map((x) => {
+            const product = x as IProduct;
+            return (
+                <React.Fragment key={product.id}>
+                    <div className='g--3 g-m--4 g-s--12 fade-in-from-top'>
+                        <ProductCard
+                            alt={product.name}
+                            moreInfoHandler={() => moreInfoHandler(product.id)}
+                            addCartHandler={() => addCartHandler(product)}
+                            image={require(`../../../assets/images/products/${product.image}`)}
+                            price={product.price}
+                            title={product.name}/>
+                    </div>
+                </React.Fragment>
+            )
+        })
+    }
 
     return (
         <div className='container container--around container--wrap--m'>
