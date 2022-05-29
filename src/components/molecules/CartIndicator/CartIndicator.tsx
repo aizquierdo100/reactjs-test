@@ -14,8 +14,8 @@ interface IProps {
 
 const CartIndicator: FC<IProps> = ({quantity, increaseHandler, decreaseHandler}) => {
     return (
-        <div className='container container--evenly'>
-            <div className='container g--4 no-margin-vertical' style={{justifyContent: 'center'}}>
+        <div className='container container--center'>
+            <div className='g--4 no-margin-vertical'>
                 <Button
                     disabled={quantity <= 0}
                     type={ButtonType.CART_ITEM}
@@ -24,7 +24,7 @@ const CartIndicator: FC<IProps> = ({quantity, increaseHandler, decreaseHandler})
             <div className='g--4 text-center'>
                 <Label>{quantity}</Label>
             </div>
-            <div className='container g--4 no-margin-vertical' style={{justifyContent: 'center'}}>
+            <div className='g--4 no-margin-vertical'>
                 <Button
                     type={ButtonType.CART_ITEM}
                     onClick={increaseHandler} >+</Button>

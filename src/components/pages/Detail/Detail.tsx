@@ -71,9 +71,9 @@ const Detail: FC = () => {
 
     return (
        <section>
-           <div className="container container--evenly container--wrap--m">
+           <div className="container justify--evenly container--wrap--m">
                <div className="g--6 g-m--12">
-                   <div className='container container--between container--wrap--m'>
+                   <div className='container justify--between container--wrap--m'>
                        {message}
                        {details}
                    </div>

@@ -19,15 +19,19 @@
 	display: flex;
 }
 
-.container--between {
+.direction--column{
+	flex-direction: column;
+}
+
+.justify--between {
 	justify-content: space-between;
 }
 
-.container--around {
+.justify--around {
 	justify-content: space-around;
 }
 
-.container--evenly {
+.justify--evenly {
 	justify-content: space-evenly;
 }
 
@@ -47,7 +51,7 @@
 	align-items: flex-end;
 }
 
-.container--justify {
+.justify--center {
 	justify-content: center;
 }
 

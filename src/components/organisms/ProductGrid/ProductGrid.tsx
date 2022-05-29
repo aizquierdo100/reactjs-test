@@ -44,7 +44,7 @@ const ProductGrid: FC<IProps> = ({products, status, addCartHandler}) => {
     }
 
     return (
-        <div className='container container--around container--wrap--m'>
+        <div className='container justify--around container--wrap--m'>
             {productsContent}
         </div>
     )

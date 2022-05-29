@@ -24,7 +24,7 @@ const ProductCard: FC<IProps> = ({image, alt, title, price,
                 <div className='card-content'>
                     <Label className='card-title'>{title}</Label>
                     <Label className='card-subtitle'>{renderPrice(price)}</Label>
-                    <div className='container container--between g--12'>
+                    <div className='container justify--between g--12'>
                         <Button onClick={moreInfoHandler}>More info</Button>
                         <Button onClick={addCartHandler}>Add to cart</Button>
                     </div>

@@ -67,9 +67,19 @@
 	margin-top: $space-small;
 }
 
+.my-3{
+	margin-top: $space-big;
+	margin-bottom: $space-big;
+}
+
 .px-2{
 	padding-left: $space-med;
 	padding-right: $space-med;
+}
+
+.px-3{
+	padding-left: $space-big;
+	padding-right: $space-big;
 }
 
 .w-100 {

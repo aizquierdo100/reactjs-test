@@ -24,7 +24,7 @@ const useCart = () => {
     const cleanCart = () => {
         dispatch(emptyCart());
     }
-    return {totalProducts, selectedCount, addCartItem, removeCartItem, cleanCart};
+    return {items, totalProducts, selectedCount, addCartItem, removeCartItem, cleanCart};
 }
 
 export default useCart;
