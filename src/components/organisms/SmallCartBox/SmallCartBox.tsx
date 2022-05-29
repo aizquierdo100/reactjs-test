@@ -20,11 +20,11 @@ const SmallCartBox: FC<IProps> = ({quantity, price, increaseHandler,
                                       decreaseHandler, addToCartHandler}) => {
     const priceContent = `Price: ${renderPrice(price, quantity)}`;
     return (
-        <div className='container container--evenly'>
-            <div className='g--6'>
+        <div className='container container--evenly container--wrap--s'>
+            <div className='g--6 g-s--12'>
                 <Label className='inline card-subtitle'>{priceContent}</Label>
             </div>
-            <div className='g--6'>
+            <div className='g--6 g-s--12'>
                 <div className='card'>
                     <div className='container container--between'>
                         <div className='g--4'>

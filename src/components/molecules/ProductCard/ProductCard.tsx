@@ -20,7 +20,7 @@ const ProductCard: FC<IProps> = ({image, alt, title, price,
     return (
         <Card>
             <React.Fragment>
-                <Image src={image} alt={alt} />
+                <Image src={require(`../../../assets/images/products/${image}`)} alt={alt} />
                 <div className='card-content'>
                     <Label className='card-title'>{title}</Label>
                     <Label className='card-subtitle'>{renderPrice(price)}</Label>

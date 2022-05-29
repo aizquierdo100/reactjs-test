@@ -34,7 +34,7 @@ const ProductGrid: FC<IProps> = ({products, status, addCartHandler}) => {
                             alt={product.name}
                             moreInfoHandler={() => moreInfoHandler(product.id)}
                             addCartHandler={() => addCartHandler(product)}
-                            image={require(`../../../assets/images/products/${product.image}`)}
+                            image={product.image}
                             price={product.price}
                             title={product.name}/>
                     </div>

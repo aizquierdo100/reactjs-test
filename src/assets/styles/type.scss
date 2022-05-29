@@ -47,6 +47,10 @@ p, a {
 	color: darken($grey, 5%);
 }
 
+.title {
+	font-size: $font-big;
+}
+
 .inline {
 	display: inline;
 }

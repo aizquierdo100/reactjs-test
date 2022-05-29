@@ -8,7 +8,7 @@ const initialData: IProduct[] = [
         id: 1,
         sku: 'E10U',
         name: 'Woman Blue Dress',
-        description: 'Adfh fghjj gjgjghj ghjggjggh fh jh gjh jgjg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         image: 'model1.jpg',
         price: 120000
     },
@@ -16,7 +16,7 @@ const initialData: IProduct[] = [
         id: 2,
         sku: 'F21R',
         name: 'Blue mono',
-        description: 'Adfh fghjj gjgjghj ghjggjggh fh jh gjh jgjg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         image: 'model2.jpg',
         price: 80000
     },
@@ -24,7 +24,7 @@ const initialData: IProduct[] = [
         id: 3,
         sku: 'V12P',
         name: 'Blue shorts',
-        description: 'Adfh fghjj gjgjghj ghjggjggh fh jh gjh jgjg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         image: 'model4.jpg',
         price: 95000
     },
@@ -32,7 +32,7 @@ const initialData: IProduct[] = [
         id: 4,
         sku: 'C47R',
         name: 'Stripe dress',
-        description: 'Adfh fghjj gjgjghj ghjggjggh fh jh gjh jgjg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         image: 'model5.jpg',
         price: 300000
     },
@@ -40,7 +40,7 @@ const initialData: IProduct[] = [
         id: 5,
         sku: 'V735',
         name: 'Red sweter',
-        description: 'Adfh fghjj gjgjghj ghjggjggh fh jh gjh jgjg',
+        description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
         image: 'model6.jpg',
         price: 400000
     }

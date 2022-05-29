@@ -46,6 +46,7 @@
 	will-change: box-shadow, background-color;
 	font-size: $font-big;
 	padding: 0;
+	color: white;
 	&:hover {
 		box-shadow: $box-shadow-float-hover;
 		background-color: lighten($secondary, 5%);
