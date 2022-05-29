@@ -4,10 +4,9 @@ import {BrowserRouter, Route, Routes} from "react-router-dom";
 import {routes} from './routes';
 import MainTemplate from './components/templates/main/Main';
 
-
 const App: FC = () => {
 
-  const renderRoutes = () => <Routes>
+    const renderRoutes = () => <Routes>
         <Route path='/' element={<MainTemplate/>}>
             {routes.map((x, i: number) => {
                 return x.index

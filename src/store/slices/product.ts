@@ -1,13 +1,6 @@
 import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 
-interface IProduct {
-    id: number;
-    name: string;
-    description: string;
-    image: string;
-    price: number;
-    isPresentation: boolean
-}
+import {IProduct} from "../../models";
 
 interface IProductState {
     products: IProduct[]
@@ -23,7 +16,7 @@ const productsSlice = createSlice({
     // `createSlice` will infer the state type from the `initialState` argument
     initialState,
     reducers: {
-        setProducts: (state, action: PayloadAction<IProduct[]>) => {
+        setProducts: (state, action: PayloadAction<IProduct[]>): void => {
             Object.assign(state, {
                 products: action.payload,
             });

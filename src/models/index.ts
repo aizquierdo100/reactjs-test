@@ -1,7 +1,13 @@
-export interface Product {
-    id: string;
-    name: string,
+export interface IProduct {
+    id: number;
+    name: string;
     description: string;
-    price: number;
     image: string;
+    price: string;
+}
+
+export enum EffectStatus {
+    LOADING = 'LOADING',
+    SUCCESS = 'SUCCESS',
+    ERROR = 'ERROR'
 }

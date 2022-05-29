@@ -1,28 +1,29 @@
-import React, {FC} from 'react';
+import React, {FC, useEffect} from 'react';
 
-import Button from "../../atoms/Button/Button";
-import ProductCard from "../../molecules/ProductCard/ProductCard";
-import '../../../assets/styles/cards_tiles.scss';
-import '../../../assets/styles/grid.scss';
-import '../../../assets/styles/type.scss';
-import '../../../assets/styles/animations.scss';
-import '../../../assets/styles/media.scss';
+import ProductGrid from "../../organisms/ProductGrid/ProductGrid";
+import {setHomeProdEffect} from "../../../effects/products";
+import {setProducts} from '../../../store/slices';
+import {useAppDispatch} from "../../../hooks/useAppDispatch";
+import {useAppSelector} from '../../../hooks/useAppSelector';
 
 const Home:FC = () => {
 
+    const {products} = useAppSelector((state) => state.productsState);
+    const dispatch = useAppDispatch();
+
+    const addCartHandler = () => {
+        console.log('test');
+    }
+
+    useEffect(() => {
+        setHomeProdEffect(dispatch)(setProducts);
+    }, [])
+
     return (
        <section>
-           <div className='container container--around container--wrap--m'>
-               <div className='g--3 g-m--4 g-s--12 fade-in-from-top'>
-                   <ProductCard />
-               </div>
-               <div className='g--3 g-m--4 g-s--12 fade-in-from-top'>
-                   <ProductCard />
-               </div>
-               <div className='g--3 g-m--4 g-s--12 fade-in-from-top'>
-                   <ProductCard />
-               </div>
-           </div>
+           <ProductGrid
+               products={products}
+               addCartHandler={addCartHandler}/>
        </section>
     )
 }
