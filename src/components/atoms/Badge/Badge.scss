@@ -2,8 +2,13 @@
 
 .badge {
   border-radius: 50%;
-  background-color: $secondary;
-  padding: 5px;
-  color: $off-white;
-  font-size: $font-small;
+  background-color: #EB2188;
+  padding-top: 5px;
+  color: #fcfcfc;
+  padding-bottom: 5px;
+  font-size: 10px;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  text-align: center;
 }

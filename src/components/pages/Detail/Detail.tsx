@@ -10,6 +10,7 @@ import {getProdDetailEffect} from '../../../effects/products'
 import {useAppDispatch} from "../../../hooks/useAppDispatch";
 import {setSelectedError, setSelectedRequest, setSelectedSuccess} from '../../../store/slices'
 import SmallCartBox from "../../organisms/SmallCartBox/SmallCartBox";
+import Spinner from "../../atoms/Spinner/Spinner";
 
 const Detail: FC = () => {
 
@@ -22,10 +23,6 @@ const Detail: FC = () => {
 
     const addOrIncreaseHandler = () => {
         setCount((prevState) => prevState + 1);
-/*        if(selected){
-            const cartItem: ICartItem = {...selected, quantity: 1};
-            addCartItem(cartItem);
-        }*/
     }
 
     const removeOrDecreaseHandler = () => {
@@ -43,7 +40,7 @@ const Detail: FC = () => {
     let details = null;
     let message = null;
     if(selectedStatus === EffectStatus.LOADING){
-        message = 'LOADING';
+        message = <Spinner />;
     }
     else if(selectedStatus === EffectStatus.ERROR){
         message = 'ERROR MESSAGE';

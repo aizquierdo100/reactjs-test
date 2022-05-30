@@ -2,6 +2,7 @@ import React, {FC} from "react";
 import {useNavigate} from "react-router-dom";
 
 import ProductCard from "../../molecules/ProductCard/ProductCard";
+import Spinner from "../../atoms/Spinner/Spinner";
 import '../../../assets/styles/grid.scss';
 import '../../../assets/styles/animations.scss';
 import {EffectStatus, IProduct} from "../../../models";
@@ -22,10 +23,18 @@ const ProductGrid: FC<IProps> = ({products, status, addCartHandler}) => {
 
     let productsContent = null;
     if(status === EffectStatus.LOADING){
-        productsContent = 'Loading';
+        productsContent = Array(3).fill(1).map((_, i: number) => {
+           return (
+               <React.Fragment key={i}>
+                   <div className='g--3 g-m--4 g-s--12'>
+                       <Spinner />
+                   </div>
+               </React.Fragment>
+           )
+        });
     }
     else if(status === EffectStatus.SUCCESS){
-        productsContent = products.map((x) => {
+        productsContent = products.map((x: IProduct) => {
             const product = x as IProduct;
             return (
                 <React.Fragment key={product.id}>

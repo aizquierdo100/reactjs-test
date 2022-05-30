@@ -8,7 +8,7 @@ interface IProps {
 
 const Badge: FC<IProps> = ({value}) => {
     return (
-        <div className='badge inline mx-1'>{value}</div>
+        <div className='badge mx-1'>{value}</div>
     );
 };
 
