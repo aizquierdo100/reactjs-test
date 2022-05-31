@@ -2,7 +2,7 @@ import React, {FC} from 'react';
 
 import CartIndicator from "../../molecules/CartIndicator/CartIndicator";
 import Label from "../../atoms/Label/Label";
-import '../../../assets/styles/cards_tiles.scss';
+import '../../atoms/Card/Card.scss';
 import '../../../assets/styles/grid.scss';
 import Button from "../../atoms/Button/Button";
 import '../../../assets/styles/utility.scss';

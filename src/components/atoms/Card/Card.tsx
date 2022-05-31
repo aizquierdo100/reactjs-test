@@ -1,6 +1,6 @@
 import React, {FC, ReactElement} from 'react';
 
-import '../../../assets/styles/cards_tiles.scss';
+import './Card.scss';
 
 interface IProps {
     children: ReactElement
