@@ -3,7 +3,7 @@ import React, {FC} from 'react';
 import './Badge.scss';
 
 interface IProps {
-    value: number;
+    value?: number;
 }
 
 const Badge: FC<IProps> = ({value}) => {

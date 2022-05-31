@@ -5,14 +5,14 @@ import {ButtonType} from "../../../constants";
 
 
 interface IProps {
-    disabled?: boolean | null;
+    disabled?: boolean;
     children: ReactNode;
-    onClick?: () => void | null;
+    onClick?: () => void;
     type?: ButtonType,
-    className?: string | null;
+    className?: string;
 }
 
-const Button: FC<IProps> = ({disabled = false, onClick,
+const Button: FC<IProps> = ({disabled, onClick,
                                 type = ButtonType.PRIMARY, className,
                                 children}) => {
     let classes = 'btn--raised';
@@ -31,6 +31,7 @@ const Button: FC<IProps> = ({disabled = false, onClick,
 }
 
 Button.defaultProps = {
+    disabled: false,
     className: ''
 }
 
