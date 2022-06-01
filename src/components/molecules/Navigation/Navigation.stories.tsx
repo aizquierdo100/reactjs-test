@@ -11,7 +11,7 @@ export default {
     },
 } as ComponentMeta<typeof Navigation>;
 
-const Template: ComponentStory<typeof Navigation> = (args) => <BrowserRouter><Navigation {...args} /></BrowserRouter>
+const Template: ComponentStory<typeof Navigation> = (args) => <BrowserRouter><nav className="g--3 g-s--12 nav--horizontal"><Navigation {...args} /></nav></BrowserRouter>
 
 export const BaseNavigation = Template.bind({});
 BaseNavigation.args = {

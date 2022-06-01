@@ -4,7 +4,7 @@ import AppBar from './AppBar';
 import { BrowserRouter } from 'react-router-dom';
 
 export default {
-    title: 'Components/Molecules/AppBar',
+    title: 'Components/Organisms/AppBar',
     component: AppBar,
     argTypes: {
         backgroundColor: { control: 'color' },

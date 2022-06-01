@@ -22,7 +22,7 @@ BaseProductCard.args = {
         alert('Loading...')
     },
     addCartHandler: () => {
-        alert('Add to card')
+        alert('Add to cart')
     }
 };
 

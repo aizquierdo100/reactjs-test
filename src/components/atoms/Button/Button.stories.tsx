@@ -13,15 +13,15 @@ export default {
 
 const Template: ComponentStory<typeof Button> = (args) => <Button {...args} />;
 
-export const BaseButtonPrimaryDisabled = Template.bind({});
-BaseButtonPrimaryDisabled.args = {
+export const ButtonPrimaryDisabled = Template.bind({});
+ButtonPrimaryDisabled.args = {
     disabled: true,
     children: 'Disabled',
     type: ButtonType.PRIMARY,
 };
 
-export const BaseButtonPrimaryEnabled = Template.bind({});
-BaseButtonPrimaryEnabled.args = {
+export const ButtonPrimaryEnabled = Template.bind({});
+ButtonPrimaryEnabled.args = {
     disabled: false,
     children: 'Click me',
     onClick: () => {

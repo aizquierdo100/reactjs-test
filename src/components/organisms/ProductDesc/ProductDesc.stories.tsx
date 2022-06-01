@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import ProductDesc from './ProductDesc';
 
 export default {
-    title: 'Components/Molecules/ProductDesc',
+    title: 'Components/Organisms/ProductDesc',
     component: ProductDesc,
     argTypes: {
         backgroundColor: { control: 'color' },

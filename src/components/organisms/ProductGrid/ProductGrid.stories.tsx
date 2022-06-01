@@ -5,7 +5,7 @@ import { EffectStatus } from "../../../models";
 import { BrowserRouter } from 'react-router-dom';
 
 export default {
-    title: 'Components/Molecules/ProductGrid',
+    title: 'Components/Organisms/ProductGrid',
     component: ProductGrid,
     argTypes: {
         backgroundColor: { control: 'color' },
@@ -14,8 +14,8 @@ export default {
 
 const Template: ComponentStory<typeof ProductGrid> = (args) => <BrowserRouter><ProductGrid {...args} /></BrowserRouter>
 
-export const BaseProductGridSuccess = Template.bind({});
-BaseProductGridSuccess.args = {
+export const ProductGridSuccess = Template.bind({});
+ProductGridSuccess.args = {
     products: [{
         id: 4,
         sku: "C47R",
@@ -30,8 +30,8 @@ BaseProductGridSuccess.args = {
     }
 };
 
-export const BaseProductGridError = Template.bind({});
-BaseProductGridError.args = {
+export const ProductGridError = Template.bind({});
+ProductGridError.args = {
     products: [{
         id: 4,
         sku: "C47R",
@@ -46,8 +46,8 @@ BaseProductGridError.args = {
     }
 };
 
-export const BaseProductGridLoading = Template.bind({});
-BaseProductGridLoading.args = {
+export const ProductGridLoading = Template.bind({});
+ProductGridLoading.args = {
     products: [{
         id: 4,
         sku: "C47R",

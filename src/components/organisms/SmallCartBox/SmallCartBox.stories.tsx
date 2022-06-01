@@ -5,7 +5,7 @@ import { EffectStatus } from "../../../models";
 import { BrowserRouter } from 'react-router-dom';
 
 export default {
-    title: 'Components/Molecules/SmallCartBox',
+    title: 'Components/Organisms/SmallCartBox',
     component: SmallCartBox,
     argTypes: {
         backgroundColor: { control: 'color' },

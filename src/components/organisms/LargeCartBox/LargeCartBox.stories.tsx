@@ -3,7 +3,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import LargeCartBox from './LargeCartBox';
 
 export default {
-    title: 'Components/Molecules/LargeCartBox',
+    title: 'Components/Organisms/LargeCartBox',
     component: LargeCartBox,
     argTypes: {
         backgroundColor: { control: 'color' },
