@@ -6,6 +6,7 @@ import Spinner from "../../atoms/Spinner/Spinner";
 import '../../../assets/styles/grid.scss';
 import '../../../assets/styles/animations.scss';
 import {EffectStatus, IProduct} from "../../../models";
+import Label from "../../atoms/Label/Label";
 
 interface IProps {
     products: IProduct[];
@@ -34,7 +35,7 @@ const ProductGrid: FC<IProps> = ({products, status, addCartHandler}) => {
         });
     }
     else if(status === EffectStatus.SUCCESS){
-        productsContent = products.map((x: IProduct) => {
+        productsContent = products.length >= 0 ? products.map((x: IProduct) => {
             const product = x as IProduct;
             return (
                 <React.Fragment key={product.id}>
@@ -49,7 +50,7 @@ const ProductGrid: FC<IProps> = ({products, status, addCartHandler}) => {
                     </div>
                 </React.Fragment>
             )
-        })
+        }) : <Label>No products</Label>
     }
 
     return (

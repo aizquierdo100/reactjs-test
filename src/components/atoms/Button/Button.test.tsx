@@ -3,7 +3,7 @@ import { act } from "react-dom/test-utils";
 import ReactDOM from "react-dom/client";
 import {unmountComponentAtNode} from "react-dom";
 
-import Badge from "./Badge";
+import Button from "./Button";
 
 // In your test setup file
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -24,14 +24,28 @@ afterEach(() => {
     //container = null;
 });
 
-it("renders with or without value", () => {
+it("enabled by default and disabled by props", () => {
     const root = ReactDOM.createRoot(container);
     act(() => {
-        root.render(<Badge/>);
+        root.render(<Button>Test</Button>);
     });
-    expect(container?.textContent).toBe("0");
+    const button = document.querySelector("button");
+    expect(button).not.toBeDisabled();
     act(() => {
-        root.render(<Badge value={12}/>);
+        root.render(<Button disabled>Test</Button>);
     });
-    expect(container?.textContent).toBe("12");
+    expect(button).toBeDisabled();
+});
+
+it("call onClick callback when clicked", () => {
+    const root = ReactDOM.createRoot(container);
+    const onClick = jest.fn();
+    act(() => {
+        root.render(<Button onClick={onClick}>Test</Button>);
+    });
+    const button = document.querySelector("button");
+    act(() => {
+        button?.dispatchEvent(new MouseEvent("click", { bubbles: true }));
+    });
+    expect(onClick).toHaveBeenCalled();
 });

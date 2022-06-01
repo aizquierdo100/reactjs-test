@@ -3,7 +3,7 @@ import {PayloadAction, createSlice} from "@reduxjs/toolkit";
 import {ICartItem, ICartState} from "../../models";
 
 // Define the initial state using that type
-const initialState: ICartState = {
+export const initialState: ICartState = {
     items: [],
     totalProducts: 0,
 }
